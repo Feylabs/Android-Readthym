@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Readthym</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_navdraw_container">NavdrawContainerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="News">Berita</string>
+    <string name="Share">Bagikan</string>
+    <string name="Link_copied">Link Disalin</string>
+    <string name="Photo">Foto</string>
+    <string name="label_Login_first">Silakan Login Terlebih Dahulu</string>
+    <string name="column_required">Kolom ini diperlukan</string>
+    <string name="an_error_occured">Terjadi Kesalahan</string>
+    <string name="NoResult">No Result</string>
+    <string name="SearchNoResult">Pencarian Tidak Ditemukan</string>
+    <string name="Permohonan">Permohonan</string>
+    <string name="PermintaanPermohonan">Permintaan\nPermohonan</string>
+    <string name="StatusPermohonan">Status\nPermohonan</string>
+    <string name="Account">Account</string>
+    <string name="FAQ">FAQ</string>
+    <string name="HubungiKami">Hubungi Kami</string>
+    <string name="Notifikasi">Notifikasi</string>
+    <string name="KebijakanPrivasi">Kebijakan Privasi</string>
+    <string name="Perhatian">Perhatian</string>
+    <string name="AndaAkanDialihkan">Anda akan dialihkan menuju halaman website</string>
+    <string name="Batalkan">Batalkan</string>
+    <string name="PengajuanKeberatan">Pengajuan Keberatan</string>
+    <string name="KasusPosisi">Kasus Posisi</string>
+    <string name="PengajuanKeberatanSuccess">Pengajuan Keberatan Anda Berhasil Dikirimkan</string>
+    <string name="Berhasil">Berhasil</string>
+    <string name="Registrasi">Registrasi</string>
+    <string name="label_camera">Kamera</string>
+    <string name="label_gallery">Gallery</string>
+    <string name="AmbilGambarDengan">Ambil Gambar Dengan</string>
+    <string name="message_password_harus_sama">Password harus sama dengan kolom retype password</string>
+    <string name="RegistrasiBerhasil">Registrasi Berhasil</string>
+    <string name="FotoBerhasilDiambil">Foto Berhasil Diambil</string>
+    <string name="DetailPengajuanKeberatan">Detail Pengajuan Keberatan</string>
+    <string name="LihatDetail">Lihat Detail</string>
+    <string name="AjukanKeberatan">Ajukan Keberatan</string>
+    <string name="LihatInformasi">Lihat Informasi</string>
+    <string name="BelumAdaJawaban">Belum Ada Jawaban</string>
+    <string name="JawabanPengajuanKeberatan__">Jawaban Pengajuan Keberatan :</string>
+    <string name="MohonIsiSemuaInput">Mohon Isi Semua Input</string>
+    <string name="EmailResetPasswordSuccess">Email Reset Password Berhasil Dikirimkan</string>
+    <string name="MasukkanPasswordLama">Masukkan Password Lama</string>
+    <string name="MasukkanPasswordBaru">Masukkan Password Baru</string>
+    <string name="VisiMisi">Visi Misi</string>
+    <string name="TugasDanWewenang">Tugas dan Wewenang</string>
+    <string name="StrukturPPID">Struktur PPID</string>
+    <string name="Profil">Profil</string>
+
+    <string-array name="array_type_identity">
+        <item value="ASN">KTP</item>
+        <item value="BUMN">PASPOR</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <string name="MuatLebihBanyak">Tampilkan Data Lebih Banyak</string>
+    <string name="Halaman">Halaman</string>
+    <string name="LengkapiIsianTerlebihDahulu">Lengkapi Isian Terlebih Dahulu</string>
+    <string name="AmbilGambar">Ambil Gambar</string>
+    <string name="File2MBRestriction">File Tidak Boleh Lebih Dari 2 MB</string>
+
+    <string name="MediaSosial">Media Sosial</string>
+    <string name="BelumAdaNotifikasi">Belum Ada Notifikasi</string>
+    <string name="BelumAdaData">Belum Ada Data</string>
+    <string name="NotAvailableYet">Not Available Yet</string>
+    <string name="MenuNotAvailableYet">Menu Sedang Tidak Dapat Diakses</string>
+
+
+    <string name="LihatKonten">Lihat Konten</string>
+    <string name="KlikOpenBrowser">Klik untuk membuka konten di browser</string>
+    <string name="email_format_error">Format Email Tidak Valid</string>
+    <string name="minimal_8_karakter">Minimal 8 karakter</string>
+    <string name="PilihFotoDulu">Pilih Foto Terlebih Dahulu</string>
+    <string name="file_format_register">File harus berformat jpg atau png</string>
+    <string name="RegistrasiTidakBerhasil">Registrasi Tidak Berhasil</string>
+    <string name="error_please_open_web">Terdapat gangguan pada server PPID Kemendag, silakan mendaftar melalui website</string>
+    <string name="RegistrasiBerhasil_and_login">Registrasi berhasil, silakan login untuk melanjutkan</string>
+    <string name="FormatFoto">Format Foto</string>
+    <string name="foto_yang_anda_pilih_berformat">" , foto yang anda pilih berformat"</string>
+    <string name="Daftar__">Daftar</string>
+    <string name="TidakPunyaAkun">Tidak Punya Akun ?</string>
+    <string name="EmailTidakDitemukan">Email Tidak Ditemukan</string>
+    <string name="PasswordGagalDiganti">Password Gagal Diganti</string>
+    <string name="text_long">J.D. Salinger was an American writer, best known for his 1951 novel The Catcher in the Rye. Before its publi cation, Salinger published several short stories in Story magazine</string>
+    <string name="add_to_favorite">Add To Favorite</string>
+
+
+</resources>

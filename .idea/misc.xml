@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bg_button_negative_dialog.xml" value="0.14739583333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bg_button_positive_dialog.xml" value="0.14583333333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bg_rounded_container_menu.xml" value="0.14270833333333333" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bg_shimmer_soft.xml" value="0.1765625" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bn_menu_doc.xml" value="0.20989583333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bn_menu_home.xml" value="0.20989583333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bn_menu_notif.xml" value="0.20989583333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/bn_menu_profile.xml" value="0.20989583333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.18229166666666666" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/ic_bn_menu_ic_home_active.xml" value="0.20989583333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/ic_bn_menu_ic_profile.xml" value="0.14739583333333334" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/ic_camera_green.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/ic_close.xml" value="0.18802083333333333" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/ic_status_doc.xml" value="0.17604166666666668" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/ic_wave_bottom.xml" value="0.21203703703703702" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/drawable/side_nav_bar.xml" value="0.1234375" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/activity_navdraw_container.xml" value="0.103125" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/all_information_fragment.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/app_bar_navdraw_container.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/content_navdraw_container.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/custom_menu.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/custom_menu_drawer_item.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/example_pagination_fragment.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_all_news.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_ask_doc.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_ask_doc_reluctance.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_change_password.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_common_transition.xml" value="0.25234375" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_contact_us.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_detail_information.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_detail_news.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_detail_photo.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_doc.xml" value="0.25234375" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_doc_detail.xml" value="0.5" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_doc_history.xml" value="0.16822916666666668" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_document.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_ex.xml" value="0.16354166666666667" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_faq.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_forgot_password.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_information_type_pdf.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_information_type_text.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_login.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_menu_child.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_notif.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_notifications.xml" value="0.25234375" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_photo_preview.xml" value="0.15416666666666667" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_ppid_profile.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_privacy_policy.xml" value="0.15" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_profile.xml" value="0.15" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_register.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_register1.xml" value="0.14" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_register2.xml" value="0.15" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_register3.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_register4.xml" value="0.12864583333333332" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_search.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/ic_placeholder_photo.xml" value="0.171875" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_article.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_article_on_all_news.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_information.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_information_request.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_instagram.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_photo_detail.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_search.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_youtube.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_faq.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_menu_image_logo.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_notif.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_rv_load_more.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_shimmer_instagram.xml" value="0.16041666666666668" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_shimmer_soft_list.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_shimmer_yt.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/item_side_menu.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_detail_photo_preview.xml" value="0.17" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_dialog.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_empty_state.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_search_box.xml" value="0.5" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_shimmer_ig_home.xml" value="0.16041666666666668" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_shimmer_inbox_detail.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_shimmer_soft_list.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_shimmer_yt_home.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/layout/nav_header_navdraw_container.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18611111111111112" />
+        <entry key="..\:/AndroidStudioProjects/PPIDKementerianPerdagangan/app/src/main/res/menu/navdraw_container.xml" value="0.12395833333333334" />
+        <entry key="..\:/Project/Android/PPIDKementerianPerdagangan/app/src/main/res/drawable/bg_rounded_container_menu.xml" value="0.1" />
+        <entry key="..\:/Project/Android/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_ask_doc_reluctance.xml" value="0.1" />
+        <entry key="..\:/Project/Android/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_home.xml" value="0.14" />
+        <entry key="..\:/Project/Android/PPIDKementerianPerdagangan/app/src/main/res/layout/fragment_login.xml" value="0.13" />
+        <entry key="..\:/Project/Android/PPIDKementerianPerdagangan/app/src/main/res/layout/item_card_information.xml" value="0.10182370820668693" />
+        <entry key="..\:/Project/Android/PPIDKementerianPerdagangan/app/src/main/res/layout/item_shimmer_yt.xml" value="0.67" />
+        <entry key="..\:/Project/Android/PPIDKementerianPerdagangan/app/src/main/res/layout/layout_shimmer_yt_home.xml" value="0.25" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/drawable/ic_wave_bottom.xml" value="0.1575" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/drawable/ic_wave_login.xml" value="0.157" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/activity_main.xml" value="0.17760416666666667" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/content_navdraw_container.xml" value="0.10552536231884058" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_ask_doc_reluctance.xml" value="0.121875" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_detail_book.xml" value="0.18" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_favorite.xml" value="0.15" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_home.xml" value="0.10597826086956522" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_home_readthym.xml" value="0.25" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_information_type_pdf.xml" value="0.1" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_login.xml" value="0.12" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_readtyhm_login.xml" value="0.12182971014492754" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_readtyhm_register.xml" value="0.2" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_register.xml" value="0.2" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_search.xml" value="0.18" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_book_fav.xml" value="0.1" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_card_article.xml" value="0.2" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_card_book_home.xml" value="0.25" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_card_search.xml" value="0.2" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_shimmer_book_home.xml" value="0.25" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_shimmer_soft_list.xml" value="0.121875" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_empty_state.xml" value="0.10552536231884058" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_search_box.xml" value="0.209375" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_shimmer_book_home.xml" value="0.209375" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_shimmer_inbox_detail.xml" value="0.1" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_shimmer_soft_list.xml" value="0.10552536231884058" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_shimmer_yt_home.xml" value="0.1213768115942029" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/mipmap-anydpi-v26/app_ppid_logo.xml" value="0.1395" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

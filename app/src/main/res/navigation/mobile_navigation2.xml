@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/rythmHomeFragment">
+
+    <fragment
+        android:id="@+id/detailInformationPdfFragment"
+        android:name="com.readthym.book.ui.informasi.type_pdf.DetailInformationPdfFragment"
+        android:label="DetailInformationPdfFragment"
+        tools:layout="@layout/fragment_information_type_pdf" />
+
+    <fragment
+        android:id="@+id/detailInformationTextFragment"
+        android:name="com.readthym.book.ui.informasi.type_text.DetailInformationTextFragment"
+        android:label="DetailInformationTextFragment"
+        tools:layout="@layout/fragment_information_type_text" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.readthym.book.ui.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/readthymLoginFragment"
+        android:name="com.readthym.book.ui.auth.ReadthymLoginFragment"
+        android:label="ReadthymRegisterFragment" />
+    <fragment
+        android:id="@+id/rythmHomeFragment"
+        tools:layout="@layout/fragment_home_readthym"
+        android:name="com.readthym.book.ui.rythm_home.RythmHomeFragment"
+        android:label="RythmHomeFragment" />
+    <fragment
+        android:id="@+id/detailBookFragment"
+        tools:layout="@layout/fragment_detail_book"
+        android:name="com.readthym.book.ui.book.DetailBookFragment"
+        android:label="DetailBookFragment" />
+
+    <fragment
+        android:id="@+id/favoriteBookFragment"
+        android:name="com.readthym.book.ui.fav.FavoriteBookFragment"
+        android:label="FavoriteBookFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.readthym.book.ui.auth.RegisterFragment"
+        android:label="RegisterFragment" />
+
+</navigation>
