@@ -34,6 +34,15 @@ class RythmHomeFragment : BaseFragment() {
             val id = getUserID()
 
             binding.welcomeText.text = "Welcome Back $name -$id"
+
+            binding.containerUser.setOnClickListener {
+                findNavController().navigate(R.id.manageBookFragment)
+            }
+            if(MyPreference(requireContext()).getUserRole()=="1"){
+                binding.containerUser.makeVisible()
+            }else{
+                binding.containerUser.makeGone()
+            }
         }
     }
 

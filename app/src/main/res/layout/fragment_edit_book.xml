@@ -18,6 +18,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/id_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/id_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -28,7 +38,25 @@
                 android:layout_marginTop="@dimen/dimen_10dp"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginHorizontal="@dimen/dimen_20dp"
-                android:text="Tambah Buku"/>
+                android:text="Edit Book"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:cardCornerRadius="@dimen/dimen_10dp">
+
+                <ImageView
+                    android:id="@+id/thumbnails"
+                    android:layout_width="181dp"
+                    android:layout_height="248dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/thumbnail_book" />
+
+            </androidx.cardview.widget.CardView>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textFieldTitle"
@@ -89,13 +117,36 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/inter_medium"
+                android:text="Penulis Saat Ini : "
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_main"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_penulis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/inter_medium"
                 android:text="Penulis"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_main"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Ganti Penulis  : "
                 android:textAlignment="viewStart"
                 android:textColor="@color/color_main"
                 android:textSize="15sp" />
@@ -138,7 +189,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/inter_medium"
-                android:text="Foto Buku"
+                android:text="Buku (PDF)"
                 android:textAlignment="viewStart"
                 android:textColor="@color/color_main"
                 android:textSize="15sp" />
@@ -162,6 +213,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="90dp"
                 android:layout_marginTop="@dimen/dimen_20dp">
 
                 <com.google.android.material.button.MaterialButton
@@ -186,41 +238,6 @@
 
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dimen_50dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="200dp"
-                    android:paddingBottom="400dp"
-                    android:gravity="center"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/dimen_10dp"
-                        android:fontFamily="@font/inter_regular"
-                        android:text="@string/TidakPunyaAkun"
-                        android:textAlignment="center"
-                        android:textColor="@color/domain_blue"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/btn_register"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_regular"
-                        android:text="@string/Daftar__"
-                        android:textAlignment="center"
-                        android:textColor="@color/pink_book"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -229,7 +246,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-640dp"
+        android:layout_marginBottom="-690dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_wave_login"
         android:elevation="-999dp"

@@ -103,23 +103,28 @@
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/activity_main.xml" value="0.17760416666666667" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/content_navdraw_container.xml" value="0.10552536231884058" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_add_book.xml" value="0.33" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_ask_doc_reluctance.xml" value="0.121875" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_detail_book.xml" value="0.25" />
-        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_favorite.xml" value="0.15" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_edit_book.xml" value="0.1" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_favorite.xml" value="0.16" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_home.xml" value="0.10597826086956522" />
-        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_home_readthym.xml" value="0.25" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_home_readthym.xml" value="0.14" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_information_type_pdf.xml" value="0.1" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_login.xml" value="0.12" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_manage_book.xml" value="0.19673469387755102" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_readtyhm_login.xml" value="0.12182971014492754" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_readtyhm_register.xml" value="0.2" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_register.xml" value="0.2" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/fragment_search.xml" value="0.18" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_book_admin.xml" value="0.2" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_book_fav.xml" value="0.1" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_card_article.xml" value="0.2" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_card_book_home.xml" value="0.25" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_card_search.xml" value="0.2" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_shimmer_book_home.xml" value="0.25" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/item_shimmer_soft_list.xml" value="0.121875" />
+        <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_bottom_sheet_pdf.xml" value="0.2" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_empty_state.xml" value="0.10552536231884058" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_search_box.xml" value="0.209375" />
         <entry key="..\:/Project/Android/Readthym/app/src/main/res/layout/layout_shimmer_book_home.xml" value="0.209375" />

@@ -1,4 +1,4 @@
-package com.tawan.java.utils;
+package com.readthym.book.utils;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.view.View;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.tawan.java.R;
+import com.readthym.book.R;
 
 public class UtilSnackbar {
     /************************************ ShowSnackbar with message, KeepItDisplayedOnScreen for few seconds*****************************/

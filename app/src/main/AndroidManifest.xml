@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 
     <application
@@ -14,11 +16,13 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/app_book_logo"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.AndroidTheme.NoActionBar">
         <activity
             android:name="com.readthym.book.ui.NavdrawContainerActivity"
             android:exported="true"
             android:label="@string/title_activity_navdraw_container"
+            android:requestLegacyExternalStorage="true"
             android:theme="@style/Theme.AndroidTheme.NoActionBar" />
         <activity
             android:name="com.readthym.book.ui.SplashScreenActivity"

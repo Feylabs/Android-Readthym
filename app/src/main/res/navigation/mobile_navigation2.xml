@@ -46,5 +46,17 @@
         android:id="@+id/registerFragment"
         android:name="com.readthym.book.ui.auth.RegisterFragment"
         android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/manageBookFragment"
+        android:name="com.readthym.book.ui.manage_book.ManageBookFragment"
+        android:label="ManageBookFragment" />
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.readthym.book.ui.manage_book.AddBookFragment"
+        android:label="AddBookFragment" />
+    <fragment
+        android:id="@+id/editBookFragment"
+        android:name="com.readthym.book.ui.manage_book.EditBookFragment"
+        android:label="EditBookFragment" />
 
 </navigation>

@@ -11,14 +11,16 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.textfield.TextInputLayout
 import com.henrylabs.qumparan.data.remote.QumparanResource
 import com.henrylabs.qumparan.utils.base.BaseFragment
 import com.readthym.book.customview.PhotoBottomSheet
 import com.readthym.book.customview.UploadCallback
 import com.readthym.book.data.remote.reqres.AuthorResponse
-import com.readthym.book.databinding.FragmentAddBookBinding
+import com.readthym.book.data.remote.reqres.BookData
+import com.readthym.book.databinding.FragmentEditBookBinding
 import com.readthym.book.ui.book.DetailBookViewModel
-import com.readthym.book.utils.UtilSnackbar
+import com.readthym.book.utils.UIHelper.loadImageFromURL
 import com.readthym.book.utils.UtilSnackbar.showSnakbarError
 import com.readthym.book.utils.UtilSnackbar.showSnakbarSuccess
 import me.rosuh.filepicker.config.FilePickerManager
@@ -26,10 +28,10 @@ import org.koin.android.viewmodel.ext.android.viewModel
 import java.io.File
 
 
-class AddBookFragment : BaseFragment() {
+class EditBookFragment : BaseFragment() {
 
     private val binding get() = _binding!!
-    private var _binding: FragmentAddBookBinding? = null
+    private var _binding: FragmentEditBookBinding? = null
 
     val viewModel: DetailBookViewModel by viewModel()
     private val authorMap = mutableMapOf<String, Int>()
@@ -44,7 +46,6 @@ class AddBookFragment : BaseFragment() {
             PhotoBottomSheet(object : UploadCallback {
                 override fun upload(file: File) {
                     val someFilepath = file.absolutePath.toString()
-                    val extension = someFilepath.substring(someFilepath.lastIndexOf("."))
                     binding.tvTakePhoto.text = file.absolutePath.toString()
                 }
             }).show(
@@ -76,7 +77,28 @@ class AddBookFragment : BaseFragment() {
             }
         }
 
-        viewModel.storeBookLiveDataLiveData.observe(viewLifecycleOwner) {
+        viewModel.bookDetailLiveData.observe(viewLifecycleOwner) {
+            when (it) {
+                is QumparanResource.Default -> {
+                    showLoading(false)
+                }
+                is QumparanResource.Error -> {
+                    showLoading(false)
+                    showSnakbarError(requireActivity(), binding.root, it.message.toString())
+                }
+                is QumparanResource.Loading -> {
+                    showLoading(true)
+                }
+                is QumparanResource.Success -> {
+                    showLoading(false)
+                    it.data?.resData?.let {
+                        setupDetailBookData(it)
+                    }
+                }
+            }
+        }
+
+        viewModel.updateBookLiveData.observe(viewLifecycleOwner) {
             when (it) {
                 is QumparanResource.Default -> {
                     showLoading(false)
@@ -91,15 +113,28 @@ class AddBookFragment : BaseFragment() {
                 is QumparanResource.Success -> {
                     showLoading(false)
                     findNavController().popBackStack()
-                    showSnakbarSuccess(requireActivity(), binding.root, "Berhasil Menambahkan Data")
+                    showSnakbarSuccess(requireActivity(), binding.root, "Berhasil Mengedit Data")
                 }
             }
         }
 
     }
 
+    private fun setupDetailBookData(it: BookData) {
+        binding.textFieldTitle.setText(it.title)
+        binding.textFieldCategory.setText(it.category)
+        binding.textFieldOverview.setText(it.overview)
+        binding.tvPenulis.text = it.authorName
+        binding.idBook.text = it.id.toString()
+        binding.idAuthor.text=it.idAuthor.toString()
+        binding.thumbnails.loadImageFromURL(requireContext(), it.photoPathFull)
+
+    }
+
     private fun populateSpinner(data: List<AuthorResponse.ResData>) {
         val spinnerArray: MutableList<String> = mutableListOf()
+        authorMap.put("Pilih Penulis", -99)
+        spinnerArray.add("Pilih Penulis")
         data.forEachIndexed { index, data ->
             authorMap.put(data.name, data.id)
             spinnerArray.add(data.name)
@@ -125,30 +160,48 @@ class AddBookFragment : BaseFragment() {
 
     override fun initAction() {
         binding.btnSave.setOnClickListener {
-            val selectedAuthors = binding.spinnerWritter.selectedItem.toString()
-            val authorId = authorMap[selectedAuthors]
-            val bookTitle  = binding.textFieldTitle.editText?.text.toString()
-            val bookCategory = binding.textFieldCategory.editText?.text.toString()
-            val bookOverview = binding.textFieldOverview.editText?.text.toString()
-            val bookPhoto = File(binding.tvTakePhoto.text.toString())
-            val bookPdf = File(binding.tvTakeBook.text.toString())
+            var authorId : String? = null
+            var bookPhoto: File? = null
+            var bookPdf: File? = null
 
-            viewModel.register(
-                title = bookTitle,
-                category = bookCategory,
+            val bookFilePath =  binding.tvTakeBook.text.toString()
+            val photoFilePath = binding.tvTakePhoto.text.toString()
+
+            val mselectedAuthors = binding.spinnerWritter.selectedItem.toString()
+            var mauthorId = authorMap[mselectedAuthors]
+            val mbookTitle = binding.textFieldTitle.editText?.text.toString()
+            val mbookCategory = binding.textFieldCategory.editText?.text.toString()
+            val mbookOverview = binding.textFieldOverview.editText?.text.toString()
+
+            if(mauthorId==-99) mauthorId=null else mauthorId = binding.idAuthor.text.toString().toIntOrNull()
+//            if(photoFilePath.contains("/")) showToast("Foto Ada")
+//            if(bookFilePath.contains("/")) showToast("Buku Aada")
+
+            if(photoFilePath.contains("/")) bookPhoto=File(photoFilePath)
+            if(bookFilePath.contains("/")) bookPdf=File(bookFilePath)
+
+            showToast(mauthorId.toString())
+            viewModel.updateBook(
+                id = binding.idBook.text.toString(),
+                title = mbookTitle,
+                category = mbookCategory,
                 photo = bookPhoto,
                 book = bookPdf,
-                description = bookOverview,
-                idAuthor = authorId.toString(),
-                overview = bookOverview
+                description = mbookOverview,
+                idAuthor = mauthorId,
+                overview = mbookOverview,
             )
-
         }
-
     }
 
 
+    private fun getBookId(): String {
+        val id = arguments?.getString("id") ?: ""
+        return id
+    }
+
     override fun initData() {
+        viewModel.fetchDetailBook(getBookId())
         viewModel.fetchAuthors()
     }
 
@@ -161,7 +214,7 @@ class AddBookFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentAddBookBinding.inflate(inflater)
+        _binding = FragmentEditBookBinding.inflate(inflater)
         return binding.root
     }
 
@@ -170,7 +223,7 @@ class AddBookFragment : BaseFragment() {
             FilePickerManager.REQUEST_CODE -> {
                 if (resultCode == Activity.RESULT_OK) {
                     val list = FilePickerManager.obtainData()
-                    binding.tvTakeBook.text=list.get(0)
+                    binding.tvTakeBook.text = list.get(0)
                 } else {
                     showToast("Choose Something")
                 }
@@ -178,4 +231,10 @@ class AddBookFragment : BaseFragment() {
         }
     }
 
+    private fun TextInputLayout.setText(s: String) {
+        this.editText?.setText(s)
+    }
+
 }
+
+

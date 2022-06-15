@@ -87,9 +87,17 @@ class MyPreference(context: Context) {
     fun getUserName(): String {
         return sharedPref.getString("NAME", "").orEmpty()
     }
+    fun getUserRole(): String {
+        return sharedPref.getString("ROLE", "").orEmpty()
+    }
 
     fun saveUserName(name: String) {
         editor.putString("NAME", name)
+        editor.commit()
+    }
+
+    fun saveUserRole(name: String) {
+        editor.putString("ROLE", name)
         editor.commit()
     }
 

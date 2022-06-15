@@ -20,6 +20,36 @@ class RemoteDataSource(
     suspend fun getBookDetail(id: String) =
         commonService.getBooksById(id)
 
+    suspend fun getAuthors() =
+        commonService.getAuthors()
+
+    suspend fun deleteBook(id: String) =
+        commonService.deleteBook(id)
+
+    suspend fun storeBook(
+        bodyPost: Map<String, @JvmSuppressWildcards RequestBody>,
+        photo: MultipartBody.Part,
+        book: MultipartBody.Part
+    ) =
+        commonService.storeBook(
+            data = bodyPost,
+            photo = photo,
+            book = book
+        )
+
+    suspend fun updateBook(
+        id: String,
+        bodyPost: Map<String, @JvmSuppressWildcards RequestBody>,
+        photo: MultipartBody.Part?,
+        book: MultipartBody.Part?
+    ) =
+        commonService.updateBook(
+            id = id,
+            data = bodyPost,
+            photo = photo,
+            book = book
+        )
+
     suspend fun checkIfFavorite(userId: String, bookId: String) = commonService.checkIfFavorite(
         userId = userId, bookId = bookId
     )

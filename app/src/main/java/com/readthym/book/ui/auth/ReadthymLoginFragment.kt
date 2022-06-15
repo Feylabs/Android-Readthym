@@ -126,6 +126,7 @@ class ReadthymLoginFragment : BaseFragment() {
             saveUserID(user.id.toString())
             saveUserEmail(user.email)
             saveUserName(user.name)
+            saveUserRole(user.role)
         }
     }
 

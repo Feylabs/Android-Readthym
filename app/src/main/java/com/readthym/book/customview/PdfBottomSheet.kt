@@ -17,11 +17,13 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.readthym.book.databinding.LayoutBottomSheetBinding
+import com.readthym.book.utils.ContentUriUtils
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
-class PhotoBottomSheet(private val callback: UploadCallback) : BottomSheetDialogFragment() {
+
+class PdfBottomSheet(private val callback: UploadCallback) : BottomSheetDialogFragment() {
 
     private lateinit var currentPhotoPath: String
     private val PERMISSION_CODE_CAMERA = 1000
@@ -101,8 +103,11 @@ class PhotoBottomSheet(private val callback: UploadCallback) : BottomSheetDialog
     }
 
     fun clickGallery() {
-        val galleryIntent =
-            Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+        val intentPDF = Intent(Intent.ACTION_GET_CONTENT)
+        intentPDF.type = "application/pdf"
+        intentPDF.addCategory(Intent.CATEGORY_OPENABLE)
+        startActivityForResult(Intent.createChooser(intentPDF, "Select Picture"), REQUEST_IMAGE_GALLERY)
+        val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
         try {
             startActivityForResult(galleryIntent, REQUEST_IMAGE_GALLERY)
         } catch (e: ActivityNotFoundException) {
@@ -144,7 +149,7 @@ class PhotoBottomSheet(private val callback: UploadCallback) : BottomSheetDialog
         } else if (requestCode == REQUEST_IMAGE_GALLERY && resultCode == Activity.RESULT_OK) {
             if (data != null) {
                 data.data?.let {
-                    uploadPhotoFromGallery(it)
+                    uploadPdfFromFileManager(it)
                 }
             }
         }
@@ -182,23 +187,21 @@ class PhotoBottomSheet(private val callback: UploadCallback) : BottomSheetDialog
         }
     }
 
-    fun uploadPhotoFromGallery(data: Uri) {
-        val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
-        val cursor = requireContext().contentResolver.query(data, filePathColumn, null, null, null)
-        cursor?.let {
-            it.moveToFirst()
-            val columnIndex = it.getColumnIndex(filePathColumn[0])
-            val picturePath = it.getString(columnIndex)
-            cursor.close()
-
-            val file = File(picturePath)
-            if (file.exists()) {
-                callback.upload(file)
-            }
-        }
+    fun uploadPdfFromFileManager(data: Uri) {
+        val realUri =  ContentUriUtils.getFilePath(requireContext(),data)
+        val file = File(realUri)
+        callback.upload(file)
+//        val filePathColumn = arrayOf(MediaStore.Images.Media.DATA)
+//        val cursor = requireContext().contentResolver.query(data, filePathColumn, null, null, null)
+//        cursor?.let {
+//            it.moveToFirst()
+//            val columnIndex = it.getColumnIndex(MediaStore.Images.Media.DATA)
+//            val picturePath = it.getString(columnIndex)
+//            cursor.close()
+//            val file = File(picturePath)
+//            if (file.exists()) {
+//                callback.upload(file)
+//            }
+//        }
     }
-}
-
-interface UploadCallback {
-    fun upload(file: File)
 }

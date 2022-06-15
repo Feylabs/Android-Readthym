@@ -74,21 +74,44 @@
                 app:layout_constraintTop_toBottomOf="@id/desc_fav_top" />
 
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_add_to_fav"
-                android:layout_width="@dimen/dimen_0dp"
+            <LinearLayout
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#D45555"
-                android:layout_marginStart="@dimen/dimen_20dp"
-                android:fontFamily="@font/poppins_regular"
-                android:text="Remove From Favorite"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textAllCaps="false"
+                android:layout_width="@dimen/dimen_0dp"
                 app:layout_constraintStart_toEndOf="@id/container_iv"
                 app:layout_constraintTop_toBottomOf="@id/desc_fav_bottom"
-                app:cornerRadius="@dimen/dimen_10dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_delete_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D45555"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Hapus Buku"
+                    android:textAllCaps="false"
+
+                    app:cornerRadius="@dimen/dimen_10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_edit_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/domain_blue"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Edit\nBuku"
+                    android:textAllCaps="false"
+
+                    app:cornerRadius="@dimen/dimen_10dp" />
+
+            </LinearLayout>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,4 +1,4 @@
-package com.readthym.book.ui.rythm_home
+package com.readthym.book.ui.manage_book
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,11 @@ import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.readthym.book.R
 import com.readthym.book.data.remote.reqres.BookData
+import com.readthym.book.databinding.ItemBookAdminBinding
 import com.readthym.book.databinding.ItemCardBookHomeBinding
 import com.readthym.book.utils.UIHelper.loadImageFromURL
 
-class MainBookAdapter : RecyclerView.Adapter<MainBookAdapter.AdapterViewHolder>() {
+class ManageBookAdapter : RecyclerView.Adapter<ManageBookAdapter.AdapterViewHolder>() {
 
     val data = mutableListOf<BookData>()
     lateinit var adapterInterface: ItemInterface
@@ -26,21 +27,29 @@ class MainBookAdapter : RecyclerView.Adapter<MainBookAdapter.AdapterViewHolder>(
 
     inner class AdapterViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
-        var binding: ItemCardBookHomeBinding = ItemCardBookHomeBinding.bind(itemView)
+        var binding: ItemBookAdminBinding = ItemBookAdminBinding.bind(itemView)
 
         fun onBind(model: BookData) {
             val mContext = binding.root.context
 
-            binding.thumbnails.loadImageFromURL(
+            binding.ivFav.loadImageFromURL(
                 mContext,model.photoPathFull
             )
 
-            binding.tvBookTitle.text=model.title
-            binding.tvBookAuthor.text=model.authorName
+            binding.descFavTop.text=model.title
+            binding.descFavBottom.text=model.authorName
+
+            binding.btnDeleteBook.setOnClickListener {
+                adapterInterface.onclick(model,"DELETE")
+            }
+
+            binding.btnEditBook.setOnClickListener {
+                adapterInterface.onclick(model,"EDIT")
+            }
 
             binding.root.setOnClickListener {
                 if (adapterInterface != null) {
-                    adapterInterface.onclick(model)
+                    adapterInterface.onclick(model,"")
                 }
             }
 
@@ -49,7 +58,7 @@ class MainBookAdapter : RecyclerView.Adapter<MainBookAdapter.AdapterViewHolder>(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_card_book_home, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_book_admin, parent, false)
         return AdapterViewHolder(view)
     }
 
@@ -62,6 +71,6 @@ class MainBookAdapter : RecyclerView.Adapter<MainBookAdapter.AdapterViewHolder>(
     }
 
     interface ItemInterface {
-        fun onclick(model: BookData)
+        fun onclick(model: BookData,action:String)
     }
 }

@@ -109,4 +109,9 @@ dependencies {
     implementation 'com.github.lzjin:AndroidTagView:1.1.8'
     //https://github.com/lzjin/AndroidTagView
 
+    implementation 'com.yarolegovich:lovely-dialog:1.1.1'
+
+    implementation 'com.droidninja:filepicker:1.0.6'
+    implementation 'me.rosuh:AndroidFilePicker:0.8.2'
+
 }

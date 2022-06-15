@@ -14,6 +14,7 @@ import com.readthym.book.data.local.MyPreference
 import com.readthym.book.data.remote.reqres.ListFavoriteBookResponse
 import com.readthym.book.databinding.FragmentFavoriteBinding
 import com.readthym.book.ui.book.DetailBookViewModel
+import com.yarolegovich.lovelydialog.LovelyStandardDialog
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class FavoriteBookFragment : BaseFragment() {
@@ -51,7 +52,22 @@ class FavoriteBookFragment : BaseFragment() {
             }
 
             override fun onDelete(model: ListFavoriteBookResponse.FavoriteData) {
-                viewModel.deleteFromFavorite(bookId = model.book.id.toString(), getUserId())
+                LovelyStandardDialog(requireContext(), LovelyStandardDialog.ButtonLayout.VERTICAL)
+                    .setTopColorRes(R.color.red)
+                    .setButtonsColorRes(R.color.domain_blue)
+                    .setTopTitleColor(R.color.white)
+                    .setNegativeButtonColor(resources.getColor(R.color.black))
+                    .setTitle("Anda Yakin ?")
+                    .setMessage("Buku ini akan dihapus dari favorit anda")
+                    .setPositiveButton("Batal") { }
+                    .setNegativeButton(
+                        "Hapus"
+                    ) {
+                        viewModel.deleteFromFavorite(
+                            bookId = getBookId(), userId = getUserId()
+                        )
+                    }
+                    .show()
             }
         })
     }

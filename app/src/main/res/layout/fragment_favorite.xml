@@ -72,4 +72,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         layout="@layout/layout_empty_state" />
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

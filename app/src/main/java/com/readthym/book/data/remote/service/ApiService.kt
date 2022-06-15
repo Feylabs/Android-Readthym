@@ -106,11 +106,37 @@ interface ApiService {
         @Path("id") id: String
     ): Response<ReadthymDetailBookResponse>
 
+    @GET("book/{id}/delete")
+    suspend fun deleteBook(
+        @Path("id") id: String
+    ): Response<GeneralStatusWithMessageResponse>
+
+    @Multipart
+    @POST("book/store")
+    suspend fun storeBook(
+        @PartMap data: Map<String, @JvmSuppressWildcards RequestBody>,
+        @Part() photo: MultipartBody.Part,
+        @Part() book: MultipartBody.Part,
+    ): Response<GeneralStatusWithMessageResponse>
+
+    @Multipart
+    @POST("book/{id}/update")
+    suspend fun updateBook(
+        @Path("id") id: String,
+        @PartMap data: Map<String, @JvmSuppressWildcards RequestBody>,
+        @Part() photo: MultipartBody.Part?,
+        @Part() book: MultipartBody.Part?,
+    ): Response<GeneralStatusWithMessageResponse>
+
     @GET("fav/check")
     suspend fun checkIfFavorite(
         @Query("user_id") userId: String,
         @Query("book_id") bookId: String,
     ): Response<CheckFavoriteResponse>
+
+    @GET("author")
+    suspend fun getAuthors(
+    ): Response<AuthorResponse>
 
     @POST("fav/store")
     @FormUrlEncoded
