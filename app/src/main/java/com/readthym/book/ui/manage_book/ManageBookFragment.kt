@@ -1,9 +1,13 @@
 package com.readthym.book.ui.manage_book
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +32,11 @@ class ManageBookFragment : BaseFragment() {
     private var _binding: FragmentManageBookBinding? = null
     private val binding get() = _binding!!
 
+    private val PERMISSION_CODE_CAMERA = 1000
+    private val PERMISSION_CODE_STORAGE = 1001
+    private val REQUEST_IMAGE_CAPTURE = 1
+    private val REQUEST_IMAGE_GALLERY = 2
+
     val viewModel: RythmHomeViewModel by viewModel()
     val bookViewModel: DetailBookViewModel by viewModel()
 
@@ -35,6 +44,7 @@ class ManageBookFragment : BaseFragment() {
 
     override fun initUI() {
         hideActionBar()
+        requestPemission()
         initRecyclerView()
 
         binding.icBackButton.setOnClickListener {
@@ -182,6 +192,31 @@ class ManageBookFragment : BaseFragment() {
     ): View {
         _binding = FragmentManageBookBinding.inflate(inflater)
         return binding.root
+    }
+
+    private fun requestPemission(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                ) ==
+                PackageManager.PERMISSION_DENIED ||
+                ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                ) ==
+                PackageManager.PERMISSION_DENIED
+            ) {
+                val permission = arrayOf(
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                )
+                requestPermissions(permission, PERMISSION_CODE_STORAGE)
+            } else {
+
+            }
+        } else {
+            // do nothing
+        }
     }
 
 }
