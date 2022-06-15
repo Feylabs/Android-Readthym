@@ -173,7 +173,7 @@ class EditBookFragment : BaseFragment() {
             val mbookCategory = binding.textFieldCategory.editText?.text.toString()
             val mbookOverview = binding.textFieldOverview.editText?.text.toString()
 
-            if(mauthorId==-99) mauthorId=null else mauthorId = binding.idAuthor.text.toString().toIntOrNull()
+            mauthorId = if(mauthorId==-99) binding.idAuthor.text.toString().toIntOrNull() else mauthorId
 //            if(photoFilePath.contains("/")) showToast("Foto Ada")
 //            if(bookFilePath.contains("/")) showToast("Buku Aada")
 
